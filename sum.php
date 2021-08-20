@@ -17,11 +17,15 @@ session_start();
                     echo "<h1 id='correct'> Oh that's right, thanks! </h1>";
 
                 } else {
-                    echo "<h1 id='incorrect'> What? Umm that doesn't seem right. Try again </h1>";
+                    echo "<h1 id='incorrect'> What? Umm that doesn't seem right. <br> Try again </h1>";
 
                 }
             ?>
 
+        </section>
+        <section  id="btn-section">
+        <button id="myBtn" class="hidden"> Sigh okay</button>
+        <button id="myBtn1" class="hidden"> No problem!</button>
         </section>
     </main>
 
@@ -67,6 +71,7 @@ session_start();
 
     h1{
         font-size: 4rem;
+        letter-spacing: 0.2rem;
 
     }
 
@@ -82,28 +87,65 @@ session_start();
         display:flex;
         align-items: center;
         justify-content: center;
+        text-align:center;
     }
     .green {
         background-color:#36763b
     }
     .red {
-        background-color:#d93f3f
+        background-color:#d93f3f;
+        color:white
+    }
+    .hidden{
+        display:none
+    }
+    #btn-section{
+        width:90%;
+        margin: 1rem;
+        height: 30%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button{
+        width:30rem;
+        height:10rem;
+        border-radius: 9px;
+        border:none;
+        background-color: #3c3633;
+        color:white;
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.5rem;
+        letter-spacing: 0.3rem;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
     }
 
 
 </style>
 <script>
     const bg = document.getElementById('background');
+    const btn = document.getElementById('myBtn');
+    const btn1 = document.getElementById('myBtn1');
     const correct = document.getElementById('correct');
     const incorrect = document.getElementById('incorrect');
     if (correct) {
 
         bg.classList.add('green');
+        btn1.classList.remove('hidden');
 
     } else if (incorrect) {
 
         bg.classList.add('red');
+        btn.classList.remove('hidden');
         
     }
+        btn.addEventListener('click', function() {
+        document.location.href = 'index.php';
+        });
+        btn1.addEventListener('click', function() {
+        document.location.href = 'index.php';
+        });
 </script>
 </html>
