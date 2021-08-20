@@ -139,6 +139,7 @@ session_start();
     button{
         width:30rem;
         height:12rem;
+        position:relative;
         border-radius: 9px;
         border:none;
         background-color: #1e52c3;
@@ -148,7 +149,13 @@ session_start();
         font-size: 2.5rem;
         letter-spacing: 0.3rem;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+        transition: transform .1s 
 
+    }
+    button:hover{
+
+        transition: all 0.2s ease-in-out;
+        transform: translate(0, -0.5rem)
     }
     .pink{
         color:#d498b4

@@ -90,7 +90,8 @@ session_start();
         text-align:center;
     }
     .green {
-        background-color:#36763b
+        background-color:#36763b;
+        color:white
     }
     .red {
         background-color:#d93f3f;
@@ -113,13 +114,30 @@ session_start();
         height:10rem;
         border-radius: 9px;
         border:none;
-        background-color: #3c3633;
         color:white;
         font-weight: 700;
         font-family: 'Raleway', sans-serif;
         font-size: 2.5rem;
         letter-spacing: 0.3rem;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+        transition: transform .1s 
+    }
+    button:hover{
+
+        transition: all 0.2s ease-in-out;
+        transform: translate(0, -0.5rem)
+        }
+
+    #myBtn1{
+        background-color: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(200px);
+        filter: blur();
+
+    }
+
+    #myBtn {
+        background-color: #3c3633;
+
     }
 
 
